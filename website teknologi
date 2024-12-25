@@ -1,0 +1,211 @@
+/teknologibaruoke
+    ├── index.html
+    ├── style.css
+    ├── script.js
+    ├── images/
+        ├── logo.png
+        ├── technology.jpg
+    └── README.md
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Teknologi Baru Oke</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="container">
+            <a href="#home" class="logo">
+                <img src="images/logo.png" alt="Logo" width="100">
+            </a>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Selamat datang di Teknologi Baru Oke</h1>
+            <p>Temukan berita terbaru tentang teknologi, gadget, dan inovasi terbaru di dunia teknologi.</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Tentang Kami</h2>
+            <p>Kami adalah website yang membahas teknologi terbaru. Di sini Anda akan menemukan informasi tentang perkembangan terbaru di dunia teknologi, perangkat pintar, dan inovasi yang mengubah dunia.</p>
+            <img src="images/technology.jpg" alt="Technology" class="about-img">
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Hubungi Kami</h2>
+            <p>Jika Anda memiliki pertanyaan atau ingin bekerjasama dengan kami, hubungi kami di bawah ini:</p>
+            <div class="contact-info">
+                <p><strong>Telepon:</strong> +62 812-3456-7890</p>
+                <p><strong>Email:</strong> info@teknologibaruoke.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/6281234567890" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="60">
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Teknologi Baru Oke. Semua hak cipta dilindungi.</p>
+        </div>
+    </footer>
+</body>
+</html>
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navbar */
+nav {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav .container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a.logo img {
+    width: 100px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/technology.jpg') no-repeat center center/cover;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+/* About Section */
+.about {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-img {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 30px;
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px 0;
+    background-color: #e2e2e2;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    font-size: 1.2em;
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+.whatsapp-float img {
+    border-radius: 50%;
+    background-color: #25d366;
+    padding: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+// JavaScript untuk efek floating WhatsApp (optional, jika diperlukan lebih lanjut)
+document.addEventListener('DOMContentLoaded', () => {
+    const whatsappButton = document.querySelector('.whatsapp-float');
+    whatsappButton.addEventListener('click', () => {
+        console.log('WhatsApp clicked!');
+    });
+});
